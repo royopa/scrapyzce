@@ -8,7 +8,7 @@
 import scrapy
 
 
-class ScrapyzceItem(scrapy.Item):
+class ScrapyZceItem(scrapy.Item):
     # define the fields for your item here like:
     candidate_name = scrapy.Field()
     cert_name = scrapy.Field()
@@ -19,4 +19,5 @@ class ScrapyzceItem(scrapy.Item):
     state_region = scrapy.Field()
     country = scrapy.Field()
     links = scrapy.Field()
+    photo_url = scrapy.Field()
     pass
