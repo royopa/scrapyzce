@@ -37,7 +37,7 @@ def save_url_in_file(list):
             file.write("{}\n".format(url))
 
 url_base = 'http://www.zend.com/en/yellow-pages/ZEND'
-i = 1499
+i = 2532
 
 while i < 999999:
     zce_id = str(i).zfill(6)
