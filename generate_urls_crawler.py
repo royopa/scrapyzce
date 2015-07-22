@@ -8,14 +8,25 @@ def get_urls():
 
 
 def check_url(url):
+    connect_timeout = 1.0
+    read_timeout = 1.0
     # Get the page
-    r = requests.get(url)
+    try:
+        response = requests.get(url, timeout=(connect_timeout, read_timeout))
 
-    if r.status_code == 404:
+    except requests.exceptions.ConnectTimeout as e:
+        print("Too slow! ", url, e)
+        return False
+
+    except requests.exceptions.ReadTimeout as e:
+        print("Too slow! ", url, e)
+        return False
+
+    if response.status_code == 404:
         print('Not found ', url)
         return False
 
-    if r.status_code == 200:
+    if response.status_code == 200:
         print('Found ', url)
         return True
 
@@ -26,7 +37,7 @@ def save_url_in_file(list):
             file.write("{}\n".format(url))
 
 url_base = 'http://www.zend.com/en/yellow-pages/ZEND'
-i = 176
+i = 1499
 
 while i < 999999:
     zce_id = str(i).zfill(6)
