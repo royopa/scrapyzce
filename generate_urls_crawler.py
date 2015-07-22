@@ -8,8 +8,8 @@ def get_urls():
 
 
 def check_url(url):
-    connect_timeout = 1.0
-    read_timeout = 1.0
+    connect_timeout = 2.0
+    read_timeout = 2.0
     # Get the page
     try:
         response = requests.get(url, timeout=(connect_timeout, read_timeout))
@@ -37,7 +37,7 @@ def save_url_in_file(list):
             file.write("{}\n".format(url))
 
 url_base = 'http://www.zend.com/en/yellow-pages/ZEND'
-i = 3150
+i = 11200
 
 while i < 999999:
     zce_id = str(i).zfill(6)
