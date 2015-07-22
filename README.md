@@ -1,5 +1,17 @@
 # scrapyzce
 
+Generating news URL to use in crawler
+-------------------------------------
+
+To generate new urls to use in crawler, use the command below:
+
+```bash
+$ python generate_urls_crawler.py
+```
+
+That will generate an urls_to_check.txt file containing all urls for use in 
+crawler.
+
 Storing the scraped data
 -------------------------
 

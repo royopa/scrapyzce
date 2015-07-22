@@ -3,11 +3,10 @@ from scrapyzce.items import ScrapyZceItem
 
 
 class ZceSpider(scrapy.Spider):
-    name = "zce_spider"
-    allowed_domains = ["zend.com"]
-    start_urls = [
-        "http://www.zend.com/en/yellow-pages/ZEND024088"
-    ]
+
+    def get_urls():
+        with open('urls_to_check.txt') as f:
+            return f.read().splitlines()
 
     def parse(self, response):
         item = ScrapyZceItem()
@@ -56,3 +55,7 @@ class ZceSpider(scrapy.Spider):
         print item['photo_url']
 
         yield item
+
+    name = "zce_spider"
+    allowed_domains = ["zend.com"]
+    start_urls = get_urls()
