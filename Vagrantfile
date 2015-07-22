@@ -8,6 +8,10 @@ Vagrant.configure(2) do |config|
     config.vm.synced_folder ".", "/vagrant", type: "nfs"
   end
 
+  # Create a private network, which allows host-only access to the machine
+  # using a specific IP.
+  config.vm.network "private_network", ip: "192.168.33.10"
+
   config.vm.provider "virtualbox" do |vb|
     # Customize the amount of memory on the VM:
     vb.memory = "1024"

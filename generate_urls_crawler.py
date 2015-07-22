@@ -19,19 +19,22 @@ def check_url(url):
         print('Found ', url)
         return True
 
+
+def save_url_in_file(list):
+    with open('urls_to_check.txt', 'w') as file:
+        for url in list:
+            file.write("{}\n".format(url))
+
 url_base = 'http://www.zend.com/en/yellow-pages/ZEND'
-i = 1
-list = get_urls()
+i = 176
 
 while i < 999999:
     zce_id = str(i).zfill(6)
     url_to_check = url_base+zce_id
+    list = get_urls()
 
     if check_url(url_to_check):
         if url_to_check not in list:
             list.append(url_to_check)
+            save_url_in_file(list)
     i = i + 1
-
-with open('urls_to_check.txt', 'w') as file:
-    for url in list:
-        file.write("{}\n".format(url))
