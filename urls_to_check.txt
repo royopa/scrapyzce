@@ -687,3 +687,11 @@ http://www.zend.com/en/yellow-pages/ZEND002793
 http://www.zend.com/en/yellow-pages/ZEND002794
 http://www.zend.com/en/yellow-pages/ZEND002795
 http://www.zend.com/en/yellow-pages/ZEND002797
+http://www.zend.com/en/yellow-pages/ZEND002799
+http://www.zend.com/en/yellow-pages/ZEND002804
+http://www.zend.com/en/yellow-pages/ZEND002805
+http://www.zend.com/en/yellow-pages/ZEND002810
+http://www.zend.com/en/yellow-pages/ZEND002813
+http://www.zend.com/en/yellow-pages/ZEND002814
+http://www.zend.com/en/yellow-pages/ZEND002820
+http://www.zend.com/en/yellow-pages/ZEND002822
