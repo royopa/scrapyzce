@@ -14,6 +14,10 @@ def check_url(url):
     try:
         response = requests.get(url, timeout=(connect_timeout, read_timeout))
 
+    except requests.exceptions.ConnectionError as e:
+        print("Too slow! ", url, e)
+        return False
+
     except requests.exceptions.ConnectTimeout as e:
         print("Too slow! ", url, e)
         return False
@@ -37,7 +41,7 @@ def save_url_in_file(list):
             file.write("{}\n".format(url))
 
 url_base = 'http://www.zend.com/en/yellow-pages/ZEND'
-i = 14801
+i = int(input('Enter initial id: '))
 
 while i < 999999:
     zce_id = str(i).zfill(6)
