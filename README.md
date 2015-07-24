@@ -22,5 +22,10 @@ with the following command:
 $ scrapy crawl zce_spider -o items.json
 ```
 
-That will generate an items.json file containing all scraped items, serialized
-in JSON.
+Or
+
+```bash
+$ scrapy crawl zce_spider -o items.csv -t csv
+```
+
+That will generate an items.json or items.csv file containing all scraped items.
